@@ -1,0 +1,16 @@
+.Sidebar {
+  display: none;
+  padding: var(--space-2) 0;
+  width: 30%;
+
+  background-color: var(--white);
+  border-right: 1px solid var(--darken-1);
+
+  @nest .Page--parent & {
+    border-image: linear-gradient(var(--darken-1), rgba(0,0,0,0)) 1;
+  }
+
+  @media (--breakpoint-md) {
+    display: block;
+  }
+}

@@ -1,0 +1,59 @@
+.PageContent {
+  padding: var(--space-2) 0;
+  width: 100%;
+
+  @nest .SidebarVisible & {
+    @media (--breakpoint-md) {
+      max-width: none;
+      padding: var(--space-3) var(--space-4);
+      width: 70%;
+    }
+  }
+
+  @nest .AboutPage & {
+    padding: var(--space-2) 0;
+  }
+
+  @nest .Category &,
+  .Author & { padding-top: 0; }
+
+  &.PageContent--footer {
+    & > .Container > .EditorContent { padding: 0; }
+  }
+}
+.reviewer_image {
+  width:50%;
+  margin-bottom:20px;
+
+  @media (--breakpoint-md) {
+  width:25%;
+  margin-bottom:20px;
+  }
+}
+.Blog.SidebarVisible .PageContent {
+  display: flex;
+
+  flex-direction: column;
+
+  @media (--breakpoint-md) {
+    padding: 0;
+  }
+}
+
+.Page--parent .PageContent--parent-page-intro {
+  margin: 0 auto;
+  padding: var(--space-3) 0;
+
+  @media (--breakpoint-md) {
+    /* max-width: 48rem; */
+    padding: var(--space-3) 0;
+  }
+}
+
+.Page--parent.SidebarVisible .PageContent--parent-page-intro {
+  @media (--breakpoint-md) {
+    max-width: none;
+    padding: var(--space-3) var(--space-4);
+    width: 70%;
+  }
+}

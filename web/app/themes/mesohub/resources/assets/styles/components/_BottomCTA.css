@@ -1,0 +1,96 @@
+.BottomCTA {
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  padding: 0 var(--space-1) 0 0;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--blue-dark);
+  color: var(--white);
+  transform: translateY(100%);
+  transition: transform 0.1s ease;
+
+  @media (--breakpoint-lg) {
+    display: none;
+  }
+
+  @nest .free-mesothelioma-guide &,
+        .receive-a-case-evaluation & {
+    display: none !important;
+  }
+
+  &.js-is-visible {
+    box-shadow: 0 -4px 24px 0 var(--darken-2);
+    transform: none;
+  }
+}
+
+.BottomCTA__photo {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  max-height: 90px;
+  max-width: 160px;
+  overflow: hidden;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.BottomCTA__img {
+  display: block;
+  max-width: 160px;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.BottomCTA__text {
+  padding-top: var(--space-075);
+  padding-bottom: var(--space-08);
+  padding-left: var(--space-1);
+  min-width: 201px;
+  flex: 1 1 auto;
+  font-size: 35px;
+  color: var(--white);
+}
+
+@supports (padding: max(0px)) {
+  .BottomCTA__text {
+    padding-bottom: max(env(safe-area-inset-bottom), var(--space-08));
+  }
+}
+
+.BottomCTA__heading {
+  margin-bottom: var(--space-015);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.BottomCTA__subheading {
+  margin-bottom: var(--space-05);
+  line-height: 1;
+}
+
+.BottomCTA__link {
+  margin-bottom: 0;
+  line-height: 1;
+  padding: 15px;
+}
+
+.BottomCTA__phone-number {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  text-decoration: none;
+  color: var(--white);
+
+  & .Icon {
+    color: var(--blue-light);
+  }
+}
+
+.BottomCTA__button {
+  margin-bottom:10px;
+}

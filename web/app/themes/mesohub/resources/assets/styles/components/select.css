@@ -1,0 +1,19 @@
+.select {
+  @apply max-w-full p-3 flex-auto leading-tight appearance-none bg-white border border-gray rounded shadow-inner text-gray-dark;
+
+  &:focus {
+    @apply outline-none shadow-outline;
+  }
+
+  @nest .label > &:first-of-type:not(:last-child) {
+    @apply rounded-r-none;
+  }
+
+  @nest .label > & + .input {
+    @apply border-l-0 rounded-l-none rounded-r-none;
+  }
+
+  @nest .label > &:last-child:not(:only-of-type) {
+    @apply rounded-l-none rounded-r;
+  }
+}

@@ -1,0 +1,10 @@
+.column-list,
+.columnlist,
+.ColumnList,
+.editorcontent > .column-list,
+.editorcontent > .columnlist,
+.editorcontent > .ColumnList {
+  @media (--breakpoint-md) {
+    column-count: 2;
+  }
+}

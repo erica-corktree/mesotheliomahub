@@ -1,0 +1,58 @@
+.Percentage {
+  position: relative;
+
+  height: 100%;
+  max-height: 275px;
+  max-width: 275px;
+  width: 100%;
+
+  text-align: center;
+
+  & .Percentage__text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & .Percentage__figure {
+    font-size: 64px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+  }
+
+  & .Percentage__description {
+    max-width: 215px;
+
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  & .Percentage__circle {
+    height: 100%;
+    width: 100%;
+
+    transform: rotate(-90deg);
+
+    .Percentage__circle__meter,
+    .Percentage__circle__value {
+      fill: none;
+    }
+
+    .Percentage__circle__meter {
+      stroke: var(--lighten-1);
+    }
+
+    .Percentage__circle__value {
+      stroke: var(--blue-light);
+      stroke-linecap: round;
+    }
+  }
+}

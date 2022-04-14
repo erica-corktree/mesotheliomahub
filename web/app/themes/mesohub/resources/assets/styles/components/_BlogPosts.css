@@ -1,0 +1,25 @@
+.BlogPosts {
+  padding: var(--space-1);
+
+  flex: 1 1 auto;
+
+  background-color: var(--gray-lighter);
+
+  @media (--breakpoint-md) {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  & .BlogPosts__filters {
+    display: flex;
+    margin-bottom: var(--space-2);
+
+    & .Dropdown {
+      width: 50%;
+
+      &:first-child { margin-right: var(--space-05); }
+      &:last-child { margin-left: var(--space-05); }
+    }
+  }
+
+  & .Card { margin-bottom: calc(var(--space-1) * 1.5); }
+}

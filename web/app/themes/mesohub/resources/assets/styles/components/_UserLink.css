@@ -1,0 +1,29 @@
+.UserLink {
+  display: flex;
+  padding: var(--space-075) 0;
+  align-items: center;
+  text-decoration: none;
+}
+
+.UserLink__img {
+  height: auto;
+  margin-right: var(--space-1);
+  max-width: 85px;
+  border-radius: 50%;
+}
+
+.UserLink__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.UserLink__name {
+  font-size: var(--h5);
+  font-weight: var(--font-weight-bold);
+  color: var(--blue);
+}
+
+.Icon--UserLink {
+  margin-left: auto;
+  color: var(--blue);
+}

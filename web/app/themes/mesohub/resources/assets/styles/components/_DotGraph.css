@@ -1,0 +1,94 @@
+.DotGraph {
+  display: flex;
+  margin: var(--space-2) calc(var(--space-1) * -1);
+  padding: var(--space-2);
+
+  flex-wrap: wrap;
+
+  text-align: center;
+
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+
+  @media (--breakpoint-md) {
+    margin: var(--space-4) calc(var(--space-4) * -1);
+    padding: var(--space-3) var(--space-4);
+
+    text-align: left;
+  }
+
+  & .DotGraph__col {
+    display: flex;
+    width: 100%;
+
+    &.DotGraph__col--left {
+      padding-bottom: var(--space-1);
+
+      flex-direction: column;
+      justify-content: center;
+
+      @media (--breakpoint-md) {
+        padding-bottom: 0;
+        padding-right: var(--space-2);
+        width: 60%;
+      }
+    }
+
+    &.DotGraph__col--right {
+      align-items: center;
+      justify-content: center;
+
+      @media (--breakpoint-md) {
+        width: 40%;
+
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  & .DotGraph__heading {
+    font-family: var(--accent-font);
+    font-size: var(--h4-mobile);
+    font-weight: var(--font-weight-bold);
+
+    @media (--breakpoint-md) {
+      font-size: var(--h4);
+    }
+  }
+
+  & .DotGraph__content {
+    & > :last-child { margin-bottom: 0; }
+  }
+
+  & .DotGraph__list {
+    display: flex;
+    margin: 0;
+    max-width: 175px;
+    padding: 0;
+
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    & .DotGraph__list__item {
+      display: flex;
+      height: 10%;
+      padding: var(--space-025);
+      width: 10%;
+
+      align-items: center;
+      justify-content: center;
+
+      & .DotGraph__list__dot {
+        display: block;
+        height: 8px;
+        width: 8px;
+
+        background-color: var(--darken-1);
+        border-radius: 50%;
+      }
+
+      &.DotGraph__list__item--filled .DotGraph__list__dot { background-color: var(--blue-dark); }
+    }
+  }
+}

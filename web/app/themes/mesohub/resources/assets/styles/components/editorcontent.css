@@ -1,0 +1,165 @@
+.editorcontent,
+.editorcontent .row > .col {
+  & > :--all-level-headings {
+    column-span: all;
+  }
+
+  & > h1,
+  & > h2 {
+    @apply mb-6 font-medium text-3xl;
+
+    @screen md {
+      @apply text-5xl;
+    }
+  }
+
+  & > h3 {
+    @apply mb-6 font-medium text-2xl;
+  }
+
+  & > h4 {
+    @apply mb-6 font-medium text-xl;
+  }
+
+  & > h5 {
+    @apply mb-6 font-medium text-lg;
+  }
+
+  & > h6 {
+    @apply mb-6 font-medium text-base;
+  }
+
+  & > a:not(.button) {
+    @apply font-medium underline break-words;
+  }
+
+  & > p {
+    @apply mb-4 leading-loose break-words;
+
+    & > a:not(.button) {
+      @apply font-medium underline break-words;
+    }
+  }
+
+  & > p.bold-first-letter::first-letter {
+    padding-right: 0.05em;
+    font-size: 1.75em;
+    font-weight: 600;
+    line-height: 1;
+    color: theme('colors.yellow');
+  }
+
+  & > ul,
+  & > ol {
+    @apply my-6 pl-4 list-disc;
+
+    & > li {
+      @apply mb-2 break-words;
+
+      &:last-child {
+        @apply mb-0;
+      }
+
+      & > a:not(.button) {
+        @apply font-medium underline break-words;
+      }
+    }
+
+    & > a:not(.button) {
+      @apply font-medium underline break-words;
+    }
+
+    & > p {
+      @apply mb-4 break-words;
+
+      & > a:not(.button) {
+        @apply font-medium underline break-words;
+      }
+    }
+  }
+
+  & > ol {
+    @apply list-decimal;
+  }
+
+  & > ul.unstyled,
+  & > ol.unstyled {
+    @apply pl-0 list-none;
+  }
+
+  & > dl {
+    @apply mt-8 mb-8;
+
+    & > dt {
+      @apply mb-2 font-bold tracking-wide text-yellow uppercase;
+    }
+
+    & > dd {
+      @apply mb-6 text-gray-darker;
+
+      &::after {
+        @apply table clear-both;
+        content: "";
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+
+      & > dl {
+        @apply m-0 pt-4 pr-0 pb-0 pl-6;
+      }
+    }
+  }
+
+  & > table {
+    @apply my-8 w-full;
+  }
+
+  & > table th,
+  & > table td {
+    @apply px-4 py-2 border;
+  }
+
+  & > hr {
+    @apply my-16 border-yellow;
+
+    @screen md {
+      @apply my-24;
+    }
+  }
+
+  & > :last-child {
+    @apply mb-0;
+  }
+
+  & > :only-child {
+    @apply mt-0 mb-0;
+  }
+}
+
+.bg-blue-light .editorcontent,
+.bg-blue-dark .editorcontent {
+  @apply text-white;
+
+  & > h1,
+  & > h2 {
+    @apply text-white;
+  }
+
+  & > h3 {
+    @apply text-white;
+  }
+
+  & > h4 {
+    @apply text-white;
+  }
+
+  & > h5 {
+    @apply text-white;
+  }
+
+  & > h6 {
+    @apply text-white;
+  }
+}

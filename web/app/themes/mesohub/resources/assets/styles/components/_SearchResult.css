@@ -1,0 +1,34 @@
+.SearchResult {
+  padding: var(--space-1) 0;
+
+  border-bottom: 1px solid var(--darken-1);
+
+  &:first-child { padding-top: 0; }
+  &:last-child { border-bottom: 0; }
+
+  & .SearchResult__header h2 {
+    margin: 0 0 var(--space-025);
+
+    font-size: var(--h4);
+
+    & a { color: var(--blue); }
+  }
+
+  & .SearchResult__header p {
+    font-size: var(--body-small);
+
+    & > a { color: var(--blue); }
+  }
+
+  & .SearchResult__summary { color: var(--gray-dark); }
+}
+
+.ResultsCount {
+  margin: 0;
+  padding: var(--space-1) 0;
+
+  font-size: var(--body-small);
+
+  border-bottom: 1px solid var(--darken-1);
+  color: var(--gray-dark);
+}

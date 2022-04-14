@@ -1,0 +1,91 @@
+.photo {
+  @apply relative block;
+
+  & > img {
+    @apply block h-full w-full object-cover;
+  }
+}
+
+.photo--card {
+  @apply h-48;
+
+  @screen md {
+    @apply h-56;
+  }
+}
+
+.photo--entry-content {
+  @apply h-56;
+
+  @screen md {
+    height: 400px;
+  }
+
+  & > img {
+    @apply rounded;
+  }
+}
+
+.photo--hero {
+  @apply absolute inset-y-0 right-0 z-20 w-full;
+
+  @nest .blog & {
+    @apply static;
+
+    @screen md {
+      @apply absolute w-2/5;
+    }
+  }
+}
+
+.photo--section-content {
+  @apply absolute inset-y-0 left-0 overflow-hidden w-full order-first opacity-100;
+
+  @screen md {
+    @apply order-last rounded;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  @nest .section--content-with-photo-fw & {
+    @apply absolute rounded-none;
+
+    @screen md {
+      @apply rounded-none;
+    }
+  }
+}
+
+.photo--section-form {
+  @apply absolute inset-y-0 left-0 w-full opacity-50;
+
+  @screen md {
+    @apply opacity-100;
+  }
+}
+
+.photo--section-icon-grid {
+  @apply absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: auto;
+  z-index: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+.photo--page-header {
+  @apply absolute inset-0 z-20 h-full w-full;
+}
+
+.photo--testimonial {
+  @apply absolute h-32 w-32 -mb-10 rounded-full;
+  bottom: 100%;
+  right: 1.5rem;
+}
+
+.photo--section-photo-slider {
+  max-width: 125px;
+  width: 100%;
+}

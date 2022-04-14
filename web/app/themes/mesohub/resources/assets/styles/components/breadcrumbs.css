@@ -1,0 +1,27 @@
+.breadcrumbs {
+  @apply mb-8 font-medium leading-none text-yellow;
+
+  & a {
+    @apply underline text-yellow;
+  }
+
+  .blog & {
+    @apply col-span-1 m-0 text-yellow-dark;
+
+    @media (--breakpoint-sm) {
+      @apply col-span-2;
+    }
+
+    @media (--breakpoint-md) {
+      @apply col-span-3;
+    }
+  }
+
+  .blog & a {
+    @apply text-yellow-dark;
+  }
+}
+
+.breadcrumbs > ol li + li:before {
+  content: '>';
+}

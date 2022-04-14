@@ -1,0 +1,75 @@
+.Photo {
+  position: relative;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.Photo__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Photo--CTA {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.35;
+}
+
+.Photo--Hero {
+  width: 50%;
+}
+
+.Photo--home-layer-1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z3);
+  max-height: 200px;
+}
+
+.Photo--home-layer-2 {
+  max-height: 500px;
+  width: 100%;
+
+  @media (--breakpoint-md) {
+    max-height: none;
+    width: 50%;
+    transform: translateY(-80px);
+  }
+
+  & .Photo__img {
+    object-position: top;
+
+    @media (--breakpoint-md) {
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+}
+
+.Photo--home-layer-3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z1);
+  opacity: 0.4;
+}
+
+.Photo--SplitBG {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

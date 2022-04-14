@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Say voice="woman" language="en">Thank you for contacting Rehab Spot. Please hold while we connect you with a treatment specialist.</Say>
+  <Dial timeout="90">+18558062649</Dial>
+</Response>

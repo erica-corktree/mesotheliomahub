@@ -1,0 +1,7 @@
+.entry-meta {
+  @apply mb-4 leading-none;
+}
+
+.entry-meta__author {
+  @apply underline text-yellow;
+}

@@ -1,0 +1,56 @@
+.Quote {
+  position: relative;
+  padding: var(--space-3) var(--space-1);
+  margin: var(--space-3) 0;
+  text-align: left;
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+
+  @media (--breakpoint-md) {
+    padding: var(--space-3) var(--space-4);
+    width: fit-content;
+    border-radius: 24px 0 0 24px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    display: none;
+    width: 50vw;
+    background-color: var(--blue-light);
+
+    @media (--breakpoint-md) {
+      display: block;
+    }
+  }
+}
+
+.Quote__content {
+  position: relative;
+  display: block;
+  font-family: var(--accent-font);
+  font-size: var(--h4);
+  font-weight: var(--font-weight-normal);
+
+  @media (--breakpoint-md) {
+    font-size: var(--h1);
+  }
+}
+
+.Quote__caption {
+  @media (--breakpoint-md) {
+    font-size: var(--body-large);
+    text-align: right;
+  }
+
+  & > span { font-style: normal; }
+}
+
+.Quote--blue-darker,
+.Quote--blue-darker::after {
+  background-color: var(--blue-darker);
+  color: var(--white);
+}

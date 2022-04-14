@@ -1,0 +1,111 @@
+.row {
+  @apply -mx-4 flex flex-wrap items-start justify-center;
+}
+
+.row--col-count-1 > .col {
+  @apply w-full ml-auto mr-auto;
+
+  @media (--breakpoint-md) {
+    @apply w-full;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-full;
+  }
+}
+
+.row--col-count-1 > .col--span-1 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-full;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-full;
+  }
+}
+
+.row--col-count-2 > .col {
+  @apply w-full ml-auto mr-auto;
+
+  @media (--breakpoint-md) {
+    @apply w-1/2;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-1/2;
+  }
+}
+
+.row--col-count-2 > .col--span-1 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-1/2;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-1/2;
+  }
+}
+
+.row--col-count-2 > .col--span-2 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-full;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-full;
+  }
+}
+
+.row--col-count-3 > .col {
+  @apply w-full ml-auto mr-auto;
+
+  @media (--breakpoint-md) {
+    @apply w-1/2;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-1/3;
+  }
+}
+
+.row--col-count-3 > .col--span-1 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-1/3;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-1/3;
+  }
+}
+
+.row--col-count-3 > .col--span-2 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-1/2;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-2/3;
+  }
+}
+
+.row--col-count-3 > .col--span-3 {
+  @apply w-full;
+
+  @media (--breakpoint-md) {
+    @apply w-full;
+  }
+
+  @media (--breakpoint-lg) {
+    @apply w-full;
+  }
+}

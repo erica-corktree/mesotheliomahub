@@ -1,0 +1,201 @@
+.Form {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+
+  & .Form__input {
+    display: block;
+    padding: var(--space-025) var(--space-075);
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.75;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: var(--white);
+    background-image: none;
+    border: 1px solid var(--gray-light);
+    border-radius: 2px;
+    color: var(--gray-dark);
+    transition: border-color ease-in-out 200ms, box-shadow ease-in-out 200ms;
+  }
+
+  & [type="submit"] { white-space: nowrap; }
+
+  &.js-has-error {
+    & .Button { background-color: var(--red); }
+
+    & .Form__input {
+      border-color: var(--red);
+      color: var(--red);
+    }
+  }
+}
+
+.Form.Form--horizontal {
+  display: flex;
+  justify-content: center;
+
+  & .Form__input {
+    padding: 0 var(--space-1);
+    width: auto;
+    flex: 1 1 auto;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  & .Form__phone-input {
+    overflow: hidden;
+    width: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    border: 1px solid var(--gray);
+    border-right: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  & .Button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  & .algolia-autocomplete {
+    display: flex !important;
+    align-content: stretch;
+    justify-content: center;
+
+    & .Form__input { width: 100%; }
+  }
+}
+
+.Form.Form--horizontal.js-submit-success {
+  & .Form__input {
+    padding: 0;
+    flex-grow: 0;
+    border: 0;
+  }
+
+  & .Button[type="submit"] {
+    width: 100%;
+    background-color: var(--green);
+    border-radius: var(--border-radius);
+    transition: width 200ms ease;
+  }
+}
+
+.Form__select-wrap {
+  position: relative;
+  display: block;
+
+  &::after {
+    content: "\e90e";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    display: inline-block;
+    font: normal normal normal 14px/1 'mesohub';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+}
+
+.Form__legend {
+  margin-bottom: var(--space-1);
+  padding-bottom: var(--space-05);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  border-bottom: 2px solid var(--blue);
+  color: var(--blue-dark);
+}
+
+.Form__label {
+  display: block;
+  margin-bottom: var(--space-1);
+  text-align: left;
+
+  &.Form__label--required .Form__label__text::after {
+    content: '*';
+    margin-left: var(--space-025);
+    font-size: var(--body-small);
+  }
+
+  & .Form__label__text {
+    display: block;
+    margin-bottom: var(--space-05);
+    font-size: var(--body-small);
+    line-height: 1;
+    color: var(--gray-dark);
+
+    & .not-valid {
+      margin-left: var(--space-05);
+      color: var(--red);
+    }
+  }
+}
+
+.Form__input-row {
+  display: flex;
+  margin-left: calc(var(--space-05) * -1);
+  margin-right: calc(var(--space-05) * -1);
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & .Form__input-row__col {
+    padding-left: var(--space-05);
+    padding-right: var(--space-05);
+    width: 100%;
+
+    @media (--breakpoint-md) {
+      width: calc(100% / 3);
+    }
+  }
+
+  &&--2 &__col {
+    @media (--breakpoint-md) {
+      width: 50%;
+    }
+  }
+
+  &&--3 &__col {
+    @media (--breakpoint-md) {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+.Form--modal {
+  padding: 0 var(--space-1);
+
+  @media (--breakpoint-md) {
+    padding: 0 var(--space-4);
+  }
+
+  &.js-submit-success .Form__label,
+  &.js-submit-success .Button {
+    pointer-events: none;
+    opacity: 0.35;
+  }
+
+  & .Form__label__text {
+    font-weight: var(--font-weight-bold);
+    color: var(--black);
+  }
+
+  & .Alert { margin-bottom: 0; }
+
+  & .Alert--success {
+    position: absolute;
+    bottom: var(--space-2);
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+  }
+
+  & .Alert--error { margin-top: var(--space-1); }
+}

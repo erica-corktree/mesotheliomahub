@@ -1,0 +1,27 @@
+.Alert {
+  margin-bottom: var(--space-1);
+  padding: var(--space-05) var(--space-075);
+
+  line-height: 1.2;
+
+  background-color: var(--gray-light);
+  border-radius: var(--border-radius);
+  color: var(--gray-darker);
+
+  @nest .Search & { margin-top: var(--space-1); }
+
+  &.Alert--warning {
+    background-color: var(--yellow);
+    color: var(--darken-3);
+  }
+
+  &.Alert--success {
+    background-color: var(--green);
+    color: var(--white);
+  }
+
+  &.Alert--error {
+    background-color: var(--red);
+    color: var(--white);
+  }
+}

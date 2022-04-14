@@ -1,0 +1,51 @@
+.Statistic {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+
+  text-align: center;
+
+  & .Statistic__figure {
+    margin-bottom: var(--space-1);
+
+    font-size: 72px;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+
+    & > span { display: block; }
+
+    & .Statistic__figure__text { font-size: 0.5em; }
+  }
+
+  & .Statistic__desc {
+    position: relative;
+
+    padding: var(--space-075);
+
+    font-weight: var(--font-weight-bold);
+
+    border: 6px solid;
+    border-image: linear-gradient(90deg, var(--blue), var(--blue-dark)) 6 round;
+    border-radius: 6px;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -20px;
+      left: 50%;
+
+      display: block;
+      height: 30px;
+      width: 20px;
+
+      border-top: 30px solid var(--blue-darker);
+      border-right: 20px solid transparent;
+      border-bottom: 0;
+      border-left: 20px solid transparent;
+      opacity: 0.75;
+      transform: translateX(-50%);
+    }
+  }
+}

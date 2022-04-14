@@ -1,0 +1,29 @@
+.form {
+  @apply relative;
+}
+
+.form--register {
+  & .input {
+    @apply mb-4;
+  }
+}
+
+.form--enroll {
+  @apply max-w-screen-sm mx-auto;
+
+  & .form__submit {
+    @apply text-center;
+  }
+
+  & .label {
+    @apply w-full px-3 mb-4;
+  }
+
+  & .legend {
+    @apply text-center text-white;
+  }
+}
+
+.form--order {
+  @apply flex flex-row flex-wrap;
+}

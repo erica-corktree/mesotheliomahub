@@ -1,0 +1,151 @@
+.PageHeader {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--blue-darker);
+  color: var(--white);
+
+  & > .Container {
+    position: static;
+    display: flex;
+    min-height: 150px;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (--breakpoint-md) {
+      min-height: 250px;
+    }
+
+    @nest .AboutPage &,
+    .LandingPage &,
+    .GlossaryPage &,
+    .Search &,
+    .SinglePost & {
+      @media (--breakpoint-md) {
+        min-height: 175px;
+      }
+    }
+
+    @nest .Blog & {
+      @media (--breakpoint-md) {
+        min-height: 275px;
+      }
+    }
+  }
+
+  & .PageHeader__content {
+    position: relative;
+    z-index: var(--z4);
+    margin-right: auto;
+    max-width: var(--width-3);
+    padding: var(--space-2) 0;
+    flex: 1 0 auto;
+
+    @media (--breakpoint-md) {
+      padding: var(--space-4) 0;
+      padding-top: 140px;
+    }
+
+    @nest .Blog & {
+      @media (--breakpoint-md) {
+        width: 75%;
+      }
+
+      @media (--breakpoint-lg) {
+        width: 100%;
+      }
+    }
+
+    & > h1 {
+      position: relative;
+      z-index: var(--z1);
+      margin-bottom: var(--space-1);
+      width: fit-content;
+      color: var(--white);
+    }
+
+    & > p { margin-bottom: 0; }
+
+    & :last-child { margin-bottom: 0; }
+  }
+
+  & .Illustration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    opacity: 0.25;
+
+    @media (--breakpoint-md) {
+      opacity: 0.25;
+    }
+
+    & .PageHeader__bg__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @nest .SinglePost &,
+          .Blog & {
+      bottom: 0;
+      left: 0;
+      max-width: none;
+      opacity: 0.35;
+    }
+  }
+
+  & .PageHeader__meta {
+    position: relative;
+    z-index: var(--z1);
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    @media (--breakpoint-md) {
+      flex-direction: row;
+    }
+
+    & a { color: var(--teal); }
+  }
+
+  & .PageHeader__author {
+    margin: 0 0 var(--space-05);
+
+    @media (--breakpoint-md) {
+      margin: 0 var(--space-05) 0 0;
+    }
+
+    & > a { font-weight: var(--font-weight-bold); }
+  }
+
+  & .PageHeader__time {
+    margin: 0 0 var(--space-05);
+
+    @media (--breakpoint-md) {
+      margin: 0 var(--space-05) 0 0;
+      padding-left: var(--space-05);
+      border-left: 1px solid var(--white);
+    }
+  }
+
+  & .PageHeader__categories {
+    display: flex;
+    padding: 0;
+    list-style: none;
+
+    @media (--breakpoint-md) {
+      padding: 0 0 0 var(--space-05);
+      border-left: 1px solid var(--white);
+    }
+
+    & .PageHeader__categories__item {
+      margin-right: var(--space-05);
+
+      &:last-child { margin-right: 0; }
+    }
+  }
+}

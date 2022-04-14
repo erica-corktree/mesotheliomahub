@@ -1,0 +1,130 @@
+.navigation {
+  @apply absolute top-0 left-0 hidden bg-white;
+  height: 100vh;
+  width: 100vw;
+
+  @media (--breakpoint-md) {
+    @apply static block h-auto w-auto;
+  }
+
+  &.js-active {
+    @apply block;
+    z-index: 9999;
+  }
+}
+
+.navigation__container {
+  @apply relative pt-20 flex flex-col items-center justify-between;
+
+  @media (--breakpoint-md) {
+    @apply pt-0 flex-row;
+  }
+}
+
+.navigation__menu {
+  @apply flex w-full flex-col order-2;
+
+  @media (--breakpoint-md) {
+    @apply h-20 w-auto flex-row items-stretch order-1;
+  }
+}
+
+.navigation__menu-item {
+  @apply flex flex-wrap items-stretch border-b border-gray-lighter text-yellow;
+
+  @media (--breakpoint-md) {
+    @apply border-0;
+  }
+
+  &:hover {
+    @apply text-yellow-dark;
+
+    & .navigation__submenu {
+      @media (--breakpoint-md) {
+        @apply block bg-gray-lighter;
+      }
+    }
+  }
+
+  &:first-child {
+    @apply border-t;
+
+    @media (--breakpoint-md) {
+      @apply border-0;
+    }
+  }
+
+  &.js-active .navigation__submenu {
+    @media (--breakpoint-xs-sm) {
+      @apply block;
+    }
+  }
+}
+
+.navigation__menu-link {
+  @apply relative flex py-4 w-full flex-1 items-center font-heading text-yellow;
+
+  @media (--breakpoint-md) {
+    @apply px-6 py-0;
+  }
+}
+
+.navigation__toggle-button {
+  @apply block py-2 px-4 border-l border-gray-lighter;
+
+  @media (--breakpoint-md) {
+    @apply hidden;
+  }
+}
+
+.navigation__submenu {
+  @apply static hidden p-4 w-full bg-gray-lighter border-t border-gray-lighter;
+
+  @media (--breakpoint-md) {
+    @apply absolute w-auto border-0 shadow;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
+.navigation__submenu-item {
+  @apply mb-2;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+.navigation__submenu-link {
+  @apply font-medium text-yellow;
+
+  @media (--breakpoint-md) {
+    @apply text-yellow-dark;
+  }
+}
+
+.navigation__menu-item--start-now {
+  @apply bg-transparent items-center mt-8;
+
+  &:hover {
+    @apply bg-transparent;
+  }
+
+  @screen md {
+    @apply pl-6 mt-0;
+  }
+
+  & .navigation__menu-link {
+    @apply inline-flex items-center justify-center py-2 px-4 font-bold text-base text-center no-underline bg-yellow rounded shadow-md text-white uppercase tracking-widest;
+
+    &:focus {
+      @apply outline-none shadow-outline;
+    }
+
+    &:hover,
+    &:focus {
+      @apply bg-yellow-dark text-white;
+    }
+  }
+}

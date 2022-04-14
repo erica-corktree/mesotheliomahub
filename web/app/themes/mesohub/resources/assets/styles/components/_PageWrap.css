@@ -1,0 +1,17 @@
+.PageWrap {
+  display: flex;
+  width: 100%;
+  background: var(--white);
+
+  @nest .Page--child.SidebarVisible &,
+  .Blog.SidebarVisible &,
+  .SinglePost.SidebarVisible & {
+    @media (--breakpoint-md) {
+      margin-bottom: var(--space-4);
+      overflow-x: hidden;
+
+      border-bottom: 4px solid var(--blue-darker);
+      box-shadow: var(--shadow-2);
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.Logo {
+  position: relative;
+  z-index: var(--z1);
+  display: flex;
+  margin: 0 auto;
+  max-width: 350px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--blue-light);
+  transition: opacity 0.125s ease;
+
+  @media (--breakpoint-lg) {
+    margin: 0 auto 0 0;
+  
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  & .Icon {
+    height: 30px;
+    margin-right: var(--space-025);
+    width: 30px;
+
+    @media (--breakpoint-md) {
+      height: 40px;
+      width: 40px;
+    }
+
+    @nest .Footer & {
+      & .Icon__blue-dark {
+        fill: var(--white);
+      }
+
+      & .Icon__blue-darker {
+        fill: var(--white);
+      }
+    }
+  }
+
+  & .Logo__text-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  & .Logo__text,
+  & .Logo__sub-text {
+    display: block;
+    line-height: 1;
+    color: var(--white);
+  }
+
+  & .Logo__sub-text {
+    padding: 0 var(--space-025);
+    font-size: var(--body-smaller);
+    background-color: var(--blue-darker);
+    color: var(--white);
+
+    @media (--breakpoint-md) {
+      font-size: var(--body-small);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      z-index: -1;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: var(--white);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.Masthead .Logo {
+  height: 58px;
+  margin: 0;
+  text-decoration: none;
+  background-color: var(--blue-dark);
+  color: var(--white);
+
+  @media (--breakpoint-md) {
+    height: auto;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  & .Logo__text {
+    color: var(--white);
+  }
+
+  & .Logo__sub-text {
+    background-color: var(--blue-dark);
+    color: var(--blue-light);
+
+    &::after {
+      background-color: var(--blue-light);
+    }
+  }
+}
+
+.Logo--modal {
+  margin: 0 auto var(--space-1);
+}

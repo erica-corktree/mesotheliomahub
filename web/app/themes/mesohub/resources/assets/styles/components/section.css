@@ -1,0 +1,358 @@
+.section {
+  @apply relative;
+}
+
+.section__heading {
+  @apply relative z-10 pb-4 mb-8 font-medium text-center text-3xl;
+  column-span: all;
+
+  &::after {
+    @apply absolute block bg-yellow;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 150px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+  }
+
+  & > span {
+    @apply relative block pt-2 font-medium text-2xl normal-case;
+  }
+
+  @nest .widget & {
+    &::after {
+      width: 75px;
+    }
+
+    & > span {
+      @apply font-sans font-semibold leading-none text-xl text-gray-dark;
+    }
+  }
+}
+
+.section__subheading {
+  @apply relative z-10 mb-8 text-2xl text-center;
+}
+
+.section__inner {
+  @apply relative max-w-xl mx-auto;
+}
+
+.section--blog-posts {
+  @apply py-12;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  & .section__heading {
+    @apply mb-10 text-3xl font-normal text-yellow;
+
+    @screen md {
+      @apply mb-16 text-5xl;
+    }
+  }
+}
+
+.section--card-grid {
+  @apply py-12;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  & .section__heading {
+    @apply mb-4 text-3xl;
+
+    @screen md {
+      @apply text-5xl;
+    }
+  }
+
+  .section__subheading {
+    @apply mb-8;
+
+    @screen md {
+      @apply mb-12;
+    }
+  }
+}
+
+.section--content {
+  @apply py-12;
+
+  @screen md {
+    @apply py-24;
+  }
+
+  & > .container > .editorcontent {
+    @apply relative z-20;
+  }
+
+  @nest .page-template-template-page-no-sidebar &:not(.section--content-width-small):not(.section--content-width-medium):not(.section--content-width-full) > .container {
+     max-width: 1024px;
+  }
+
+  @nest .page-template-template-page-no-sidebar &.section--content-width-small > .container {
+    max-width: 768px;
+  }
+
+  @nest .page-template-template-page-no-sidebar &.section--content-width-medium > .container {
+     max-width: 1024px;
+  }
+
+  @nest .page-template-template-page-no-sidebar &.section--content-width-full > .container {
+    max-width: 1280px;
+  }
+}
+
+.section--content-with-photo {
+  @apply py-0 bg-yellow-darker;
+
+  @screen md {
+    @apply py-24 bg-transparent;
+  }
+
+  & > .container {
+    @apply relative flex flex-col;
+  }
+
+  & > .container > .editorcontent {
+    @apply relative px-4 py-8 z-20;
+
+    @screen md {
+      @apply px-10 py-12;
+    }
+  }
+}
+
+.section--content-with-photo-fw {
+  @apply py-0 pb-12;
+
+  @screen md {
+    @apply py-20 bg-transparent;
+  }
+
+  & > .container > .editorcontent {
+    @apply relative p-0 pt-12 flex flex-col;
+
+    @screen md {
+      @apply p-0;
+    }
+  }
+
+  & > .container > .photo--section-content {
+    @apply w-full;
+
+    @screen md {
+      @apply -mx-4;
+    }
+  }
+}
+
+.section--cta:not(.section--cta-with-photo) {
+  @apply py-12;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  & > .container {
+    @apply max-w-5xl mx-auto flex flex-wrap items-center text-center;
+  }
+
+  & .section__heading {
+    @apply w-full mb-8 pb-0 text-2xl font-medium text-center;
+
+    @screen md {
+      @apply text-3xl;
+    }
+
+    &::after {
+      @apply hidden;
+    }
+  }
+
+  & .section__link {
+    @apply w-full text-center;
+  }
+}
+
+.section--cta-with-photo {
+  background-image: linear-gradient(#E79324, #FAB005);
+}
+
+.section--cta-footer {
+  @apply text-white py-12;
+  background-image: linear-gradient(#E79324, #FAB005);
+
+  .section__title {
+    @apply text-white mb-12 font-medium leading-none text-3xl;
+  }
+}
+
+.section--form-with-photo {
+  @apply text-white;
+  background-color: #E2DED9;
+}
+
+.section--form {
+  @apply py-12;
+  background-color: #E2DED9;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  & > .container {
+    @apply relative z-20;
+    max-width: 1024px;
+  }
+
+  & .section__heading {
+    @apply mb-4 p-0 font-semibold text-4xl uppercase;
+
+    @screen md {
+      @apply text-5xl;
+    }
+
+    &::after {
+      content: none;
+    }
+
+    & > span {
+      @apply relative block pt-2 font-medium text-2xl normal-case;
+
+      &::before {
+        @apply absolute block bg-yellow;
+        content: '';
+        top: 0;
+        left: 50%;
+        height: 3px;
+        width: 150px;
+        border-radius: 3px;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  & .section__subheading {
+    @apply mb-12 text-xl text-center;
+  }
+}
+
+.section--icon-grid {
+  @apply pb-12;
+
+  @screen md {
+    @apply pb-16;
+  }
+
+  & .section__heading {
+    @apply relative z-10 p-0 m-0 text-3xl font-medium leading-tight;
+
+    @screen md {
+      @apply text-5xl;
+    }
+
+    &::after {
+      @apply hidden;
+    }
+  }
+
+  & .section__subheading {
+    @apply relative z-10 mt-6 text-xl font-semibold;
+
+    @screen md {
+      @apply text-2xl mt-6;
+    }
+  }
+
+  & .section__inner {
+    @apply py-12 text-center;
+
+    @screen md {
+      @apply py-16;
+    }
+  }
+}
+
+.section--icon-grid-with-photo-fw {
+  & .section__heading,
+  & .section__subheading {
+    @apply text-white;
+  }
+
+  & .section__inner {
+    @apply mb-12 py-12 text-center;
+
+    @screen md {
+      @apply mb-16 py-16 pb-32;
+    }
+  }
+}
+
+.section--main-content {
+  @nest .home & {
+    @apply py-12;
+
+    @screen md {
+      @apply py-24;
+    }
+  }
+}
+
+.section--photo-slider {
+  @apply py-12;
+
+  & > .container > .editorcontent {
+    @apply max-w-4xl mx-auto mb-12 text-center;
+  }
+
+  & .section__heading {
+    @apply pb-0 text-2xl;
+
+    &::after {
+      @apply hidden;
+    }
+  }
+}
+
+.section--separator {
+  @apply py-0;
+
+  & .section__separator {
+    @apply border-yellow;
+  }
+}
+
+.section--testimonials {
+  @apply py-12 pb-16;
+  background-color: #E2DED9;
+
+  & .section__heading {
+    @apply font-normal text-3xl;
+
+    @screen md {
+      @apply text-5xl;
+    }
+  }
+
+  & > .container > .editorcontent {
+    @apply max-w-4xl mx-auto mb-16 text-center;
+
+    @screen md {
+      @apply mb-20;
+    }
+  }
+}
+
+.section--video {
+  @apply py-16;
+
+  @screen md {
+    @apply py-24;
+  }
+}

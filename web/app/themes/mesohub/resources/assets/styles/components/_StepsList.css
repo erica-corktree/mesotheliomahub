@@ -1,0 +1,67 @@
+.StepsList {
+  margin: var(--space-3) 0 var(--space-1);
+  padding: 0;
+
+  & .StepsList__item {
+    position: relative;
+    display: flex !important;
+    padding: var(--space-2);
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    background-color: var(--gray-lighter);
+    border-radius: var(--border-radius);
+    color: var(--blue-dark);
+
+    & .StepsList__header {
+      margin-bottom: var(--space-1);
+    }
+
+    & .StepsList__heading {
+      margin: 0 0 var(--space-1);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.2;
+      color: var(--blue);
+    }
+
+    & .StepsList__content {
+      margin-bottom: var(--space-1);
+      width: 100%;
+    }
+
+    & .StepList__index {
+      margin-bottom: var(--space-025);
+      font-size: var(--body-small);
+      font-weight: var(--font-weight-bold);
+      line-height: 1;
+      color: var(--blue-light);
+    }
+
+    & .SlotList {
+      margin-top: auto;
+      width: 100%;
+    }
+  }
+
+  & .slick-prev,
+  & .slick-next {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-light);
+    border-radius: 50%;
+
+    &::before {
+      color: var(--blue-dark);
+    }
+  }
+
+  & .slick-prev { left: -3rem; }
+  & .slick-next { right: -3rem; }
+
+  & .slick-slide > div { padding: 0 var(--space-1); }
+  & .slick-dots { margin-top: var(--space-2); }
+}

@@ -1,0 +1,69 @@
+.card {
+  @apply relative overflow-hidden flex flex-col bg-white border rounded shadow-md text-black;
+}
+
+.card__photo {
+  @apply z-0 mb-4;
+}
+
+.card__header {
+  @apply m-0 p-6;
+}
+
+.card__title {
+  @apply m-0 text-2xl font-medium leading-snug text-yellow;
+}
+
+.card__meta {
+  @apply mt-auto text-sm leading-none tracking-wide text-gray-darker;
+}
+
+.card__content {
+  @apply flex flex-col flex-auto px-6 pb-6;
+}
+
+.card__summary {
+  @apply flex flex-auto flex-col;
+}
+
+.card__link {
+  @apply mt-6;
+
+  & .button {
+    @apply shadow-none;
+  }
+}
+
+.card--fieldset {
+  @apply relative block p-6 mx-auto mt-6 overflow-hidden bg-white border rounded shadow-md text-gray-darkest;
+
+  @screen md {
+    @apply mt-8;
+  }
+}
+
+.card--post {
+  & .card__header {
+    @apply flex flex-col flex-auto;
+  }
+
+  & .card__category {
+    @apply mb-2 text-sm font-heading leading-none tracking-widest uppercase text-gray-dark;
+  }
+
+  & .card__title {
+    @apply font-semibold font-sans text-gray-darker;
+  }
+
+  & .card__author {
+    @apply text-yellow;
+  }
+
+  & .card__content {
+    @apply text-gray-darker;
+  }
+
+  & .card__summary {
+    @apply mb-6 text-sm text-gray-darker;
+  }
+}

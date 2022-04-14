@@ -1,0 +1,8 @@
+.footer {
+  @apply py-8 text-black;
+  background-color: #F8F8F4;
+
+  @screen md {
+    @apply py-12;
+  }
+}

@@ -1,0 +1,675 @@
+/**
+ * Global
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: var(--blue-black);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--black);
+  text-align: left;
+  background-color: var(--white);
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-3);
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: var(--gray-dark);
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus,
+a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+a,
+area,
+button,
+[role="button"],
+input:not([type=range]),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: var(--gray);
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:--all-level-headings {
+  @apply font-heading;
+}
+
+[id="app"] {
+  @apply flex flex-col min-h-screen text-gray-darker;
+}
+
+a {
+  color: theme('colors.primary');
+}
+
+address {
+  @apply not-italic;
+}
+
+.skip-link {
+  @apply absolute block overflow-hidden;
+  z-index: 999;
+  clip: rect(1px,1px,1px,1px);
+  height: theme('spacing.px');
+  width: theme('spacing.px');
+
+  &:focus {
+    clip: auto;
+    height: auto;
+    overflow: visible;
+    width: auto;
+  }
+}
+
+.stretched-link::after {
+  @apply absolute inset-0 z-10 bg-transparent pointer-events-auto;
+  content: "";
+}
+
+.responsive-embed {
+  @apply relative overflow-hidden h-0;
+  padding-bottom: 75%;
+
+  &.widescreen {
+    padding-bottom: 56.25%;
+  }
+
+  & iframe,
+  & object,
+  & embed,
+  & video {
+    @apply absolute top-0 left-0 h-full w-full;
+  }
+}
+
+.table-stack {
+  & thead {
+    @media (--breakpoint-xs-sm) {
+      @apply hidden;
+    }
+  }
+
+  & tr,
+  & th,
+  & td {
+    @media (--breakpoint-xs-sm) {
+      @apply block;
+    }
+  }
+}
+
+.table-scroll {
+  @apply overflow-x-auto;
+}
+
+.table-responsive {
+  @apply block my-8 mx-0 w-full overflow-x-auto scrolling-touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  & > table {
+    @apply m-0;
+  }
+}
+
+/**
+ * Block editor color palette utilities
+ * @see https://git.io/JeyD6
+ */
+
+ @each $color-name, $color-value in $theme-colors {
+  .has-$($color-name)-color {
+    color: $color-value;
+  }
+
+  .has-$($color-name)-background-color {
+    background-color: $color-value;
+  }
+}
+
+body {
+  background-color: var(--white);
+
+  &.FrontPage { background-color: var(--gray-lighter); }
+
+  &.js-no-scroll {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+h1 {
+  font-family: var(--body-font);
+  font-size: var(--h1-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h1);
+  }
+}
+
+h2 {
+  font-family: var(--body-font);
+  font-size: var(--h2-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h2);
+  }
+}
+
+h3 {
+  font-family: var(--body-font);
+  font-size: var(--h3-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h3);
+  }
+}
+
+h4 {
+  font-size: var(--h4-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h4);
+  }
+}
+
+h5 {
+  font-size: var(--h5-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h5);
+  }
+}
+
+h6 {
+  font-size: var(--h6);
+  font-weight: var(--font-weight-bold);
+}
+
+a { text-decoration: underline; }
+
+table {
+  margin: var(--space-2) auto;
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  color: var(--gray-dark);
+
+  & td,
+  & th {
+    padding: var(--space-1);
+    vertical-align: top;
+    line-height: 1;
+    border: 1px solid var(--darken-1);
+    border-left: 0;
+    border-right: 0;
+
+    &:first-child { padding-left: 0; }
+    &:last-child { padding-right: 0; }
+
+    & > p {
+      margin-bottom: var(--space-2);
+
+      & > a:not(.btn):not(.author):not([rel~="category"]) {
+        text-decoration: underline;
+      }
+
+      &:last-child { margin-bottom: 0; }
+    }
+
+    & > ul:not(.ContentList),
+    & > ol:not(.ContentList) {
+      margin: 30px 0;
+      padding-left: 26px;
+      font-family: var(--body-font);
+      font-size: 15px;
+      font-weight: var(--font-weight-1);
+      list-style-type: none;
+
+      @media (--breakpoint-md) {
+        font-size: var(--body-font-size);
+        line-height: 30px;
+      }
+
+      &:last-child { margin-bottom: 0; }
+
+      & li {
+        position: relative;
+        margin-bottom: var(--space-1);
+        line-height: 1.25rem;
+
+        &:before {
+          content: " ";
+          position: absolute;
+          top: 10px;
+          left: -26px;
+          display: block;
+          height: 2px;
+          width: 16px;
+          background-color: var(--teal);
+        }
+
+        &:last-of-type { margin-bottom: 0; }
+
+        & a:not(.btn) {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  & th {
+    vertical-align: middle;
+    font-family: var(--accent-font);
+    border: 1px solid var(--darken-1);
+    border-left: 0;
+    border-right: 0;
+    color: var(--blue);
+  }
+}
+
+table.stack {
+  & thead {
+    @media (--breakpoint-xs-sm) {
+      display: none;
+    }
+  }
+
+  & tr,
+  & th,
+  & td {
+    @media (--breakpoint-xs-sm) {
+      display: block;
+    }
+  }
+}
+
+table.table-scroll { overflow-x: auto; }
+
+.table-responsive {
+  display: block;
+  margin: var(--space-2) 0;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  & > table { margin: 0; }
+}
+
+.ScrollingTable {
+  max-height: 400px;
+  margin: var(--space-2) 0;
+  overflow: auto;
+  border: 1px solid var(--darken-1);
+
+  & > table { margin: 0; }
+
+  & td,
+  & th {
+    &:first-child { padding-left: var(--space-1); }
+    &:last-child { padding-right: var(--space-1); }
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+}
+
+.responsive-embed {
+  position: relative;
+  height: 0;
+  margin-bottom: var(--space-1);
+  padding-bottom: 75%;
+  overflow: hidden;
+
+  &.widescreen { padding-bottom: 56.25%; }
+
+  & iframe,
+  & object,
+  & embed,
+  & video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

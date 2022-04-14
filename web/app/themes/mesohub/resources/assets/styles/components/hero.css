@@ -1,0 +1,143 @@
+.hero {
+  @apply relative bg-white text-white;
+}
+
+.hero__inner {
+  @apply py-24 w-full text-center;
+
+  @screen md {
+    @apply py-64;
+  }
+}
+
+.hero__category {
+  @apply mb-1 tracking-widest uppercase;
+}
+
+.hero__title {
+  @apply mb-4 text-5xl font-medium leading-tight text-white uppercase;
+
+  @screen md {
+    @apply mb-6;
+  }
+}
+
+.hero__introduction {
+  @apply relative text-xl;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: block;
+    height: 2px;
+    width: 150px;
+    background-color: theme('colors.yellow');
+    border-radius: 3px;
+    transform: translateX(-50%);
+  }
+
+  @nest .blog &::after {
+    @apply hidden;
+  }
+}
+
+.hero__link {
+  @apply mt-6;
+}
+
+.hero--blog-featured-post {
+  @apply text-black text-left;
+  background-color: #F8F8F4;
+
+  & .hero__inner {
+    @apply py-16 text-black text-left;
+
+    @screen md {
+      @apply pt-20 pb-24 text-black w-1/2;
+    }
+  }
+
+  & .hero__title {
+    @apply mb-4 text-black;
+
+    @screen md {
+      @apply mb-6 text-black;
+    }
+  }
+
+  & .hero__introduction {
+    @apply text-base text-black;
+
+    @screen md {
+      @apply text-base text-black;
+    }
+  }
+}
+
+.hero--home-page {
+  @apply relative bg-white text-white overflow-hidden;
+
+  .hero__inner {
+    @apply pt-16 pb-12 w-full text-center;
+
+    @screen md {
+      @apply pt-32 pb-64;
+    }
+  }
+
+  .hero__title {
+    @apply mb-0 text-5xl font-medium leading-tight text-white uppercase;
+
+    @screen md {
+      @apply text-6xl;
+    }
+  }
+
+  .hero__introduction {
+    @apply relative text-3xl;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2rem;
+      left: 50%;
+      display: block;
+      height: 3px;
+      width: 150px;
+      background-color: theme('colors.yellow');
+      border-radius: 3px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.hero--training {
+  & .hero__title {
+    @apply relative mb-12 pb-4;
+
+    & > span {
+      @apply relative block font-sans font-semibold text-2xl normal-case;
+    }
+
+    &::after {
+      @apply absolute block bg-yellow;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      height: 3px;
+      width: 150px;
+      border-radius: 3px;
+      transform: translateX(-50%);
+    }
+  }
+
+  & .hero__inner {
+    @apply py-12;
+
+    @screen md {
+      @apply py-16;
+    }
+  }
+}

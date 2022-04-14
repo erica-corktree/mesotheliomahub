@@ -1,0 +1,19 @@
+.FrontPageCallout {
+  padding-top: var(--space-3);
+  width: 100%;
+
+  font-weight: var(--font-weight-4);
+  text-align: center;
+
+  color: var(--blue);
+
+  @media (--breakpoint-md) {
+    padding-top: var(--space-5);
+    width: 60%;
+
+    font-size: var(--body-large);
+    line-height: 1.75;
+    text-align: left;
+    text-align-last: left;
+  }
+}

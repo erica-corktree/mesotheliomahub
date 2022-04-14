@@ -1,0 +1,11 @@
+.BlogHeader {
+  padding: 0 var(--space-1) var(--space-2);
+
+  @media (--breakpoint-md) {
+    padding: var(--space-3);
+  }
+
+  & .BlogHeader__heading { font-size: var(--h3); }
+
+  & .BlogHeader__subheading { margin-bottom: 0; }
+}

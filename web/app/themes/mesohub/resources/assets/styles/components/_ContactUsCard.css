@@ -1,0 +1,46 @@
+.ContactUsCard {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  background-color: var(--gray-lighter);
+  border: 1px solid var(--darken-1);
+  border-radius: var(--border-radius);
+  color: var(--gray-darker);
+
+  & .ContactUsCard__email {
+    padding: var(--space-1);
+    width: 100%;
+
+    @media (--breakpoint-md) {
+      padding: calc(var(--space-1) * 1.5);
+    }
+  }
+
+  & .ContactUsCard__office {
+    margin: 0;
+    padding: var(--space-1);
+    width: 50%;
+
+    border-top: 1px solid var(--darken-1);
+    border-left: 1px solid var(--darken-1);
+
+    @media (--breakpoint-md) {
+      padding: calc(var(--space-1) * 1.5);
+    }
+
+    &:first-of-type { border-left: 0; }
+
+    & .ContactUsCard__office__name {
+      margin-bottom: var(--space-05);
+
+      font-family: var(--accent-font);
+      font-weight: var(--font-weight-bold);
+      line-height: 1;
+
+      color: var(--blue);
+    }
+
+    & .ContactUsCard__office__address { margin-bottom: 0; }
+  }
+}

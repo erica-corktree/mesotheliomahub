@@ -1,0 +1,19 @@
+.instagram {
+  @apply grid grid-cols-2 gap-4;
+
+  @screen md {
+    @apply grid-cols-3;
+  }
+}
+
+.instagram__media {
+  @apply relative flex flex-col overflow-hidden text-white border rounded bg-gray-darker;
+}
+
+.instagram__image {
+  @apply block w-full h-24 mx-auto object-cover object-center;
+}
+
+.instagram__video {
+  @apply block w-full h-24 mx-auto;
+}

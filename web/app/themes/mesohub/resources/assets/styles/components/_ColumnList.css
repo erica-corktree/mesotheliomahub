@@ -1,0 +1,27 @@
+.ColumnList,
+.EditorContent > .ColumnList {
+  @media (--breakpoint-md) {
+    column-count: 2;
+  }
+
+  &.ColumnList--no-bullets > li {
+    padding-left: 0;
+
+    &::before { content: none; }
+
+    & li::before {
+      content: '';
+
+      position: absolute;
+      top: 12px;
+      left: 0;
+
+      display: block;
+      height: 2px;
+      width: 10px;
+
+      background-color: var(--blue);
+      border-radius: var(--border-radius);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.fieldset {
+  @apply mb-4;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+.fieldset__inner {
+  @apply flex flex-row flex-wrap;
+}

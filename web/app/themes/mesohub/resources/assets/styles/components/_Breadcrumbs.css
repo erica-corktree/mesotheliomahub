@@ -1,0 +1,36 @@
+.Breadcrumbs {
+  position: relative;
+  z-index: var(--z1);
+  margin-bottom: var(--space-1);
+  width: 100%;
+  font-size: 1rem;
+  color: var(--blue-light);
+  padding:10px 0px;
+
+  @media (--breakpoint-md) {
+    display: block;
+  }
+
+  & > p {
+    margin: 0 auto;
+
+    & a {
+      color: var(--blue-light);
+
+      &:hover { color: var(--blue); }
+    }
+
+    & .breadcrumb_last {
+      font-weight: var(--font-weight-2);
+      color: var(--blue-light);
+    }
+  }
+}
+
+.Breadcrumbs--parent {
+  display: block;
+
+  @media (--breakpoint-md) {
+    display: none;
+  }
+}

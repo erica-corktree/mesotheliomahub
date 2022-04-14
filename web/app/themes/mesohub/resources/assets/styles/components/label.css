@@ -1,0 +1,11 @@
+.label {
+  @apply w-full flex flex-wrap items-center justify-start uppercase tracking-wide text-sm font-bold mb-2;
+}
+
+.label__text {
+  @apply block w-full uppercase tracking-wide text-sm font-bold text-left mb-2;
+
+  @nest .widget & {
+    @apply text-gray-darker;
+  }
+}

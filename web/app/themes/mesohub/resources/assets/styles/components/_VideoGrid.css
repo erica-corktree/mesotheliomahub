@@ -1,0 +1,33 @@
+.VideoGrid {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--breakpoint-md) {
+    margin: 0 var(--n-space-1);
+  }
+}
+
+.VideoGrid__item {
+  margin-bottom: var(--space-2);
+  width: 100%;
+
+  @media (--breakpoint-md) {
+    padding: 0 var(--space-1);
+    width: calc(100% / 3);
+  }
+}
+
+.VideoGrid__thumbnail-link {
+  display: block;
+  margin-bottom: var(--space-075);
+  border: 1px solid var(--gray-dark);
+}
+
+.VideoGrid__heading {
+  margin: 0 0 var(--space-1);
+  font-family: var(--body-font);
+  font-size: var(--h4);
+}
+
+.VideoGrid__desc { color: var(--gray-dark); }
+.VideoGrid__link { margin-bottom: 0; }

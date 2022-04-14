@@ -1,0 +1,27 @@
+.brand {
+  @apply flex items-center font-heading text-lg font-medium text-gray-darker;
+
+  @media (--breakpoint-md) {
+    @apply text-xl;
+  }
+}
+
+.brand__logo {
+  @apply inline-block w-48 h-auto;
+
+  @media (--breakpoint-md) {
+    @apply w-56;
+  }
+
+  & .shape-primary   {
+    fill: theme('colors.yellow');
+  }
+
+  & .shape-secondary {
+    fill: theme('colors.gray-darker');
+  }
+}
+
+.footer .brand {
+  @apply inline-flex mb-4 mx-auto p-0;
+}

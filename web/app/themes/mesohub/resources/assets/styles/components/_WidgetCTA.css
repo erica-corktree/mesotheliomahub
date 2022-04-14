@@ -1,0 +1,64 @@
+.WidgetCTA {
+  display: block;
+  padding: var(--space-05);
+
+  text-align: center;
+  text-decoration: none;
+
+  background-color: var(--gray-lighter);
+  color: var(--blue-dark);
+
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  @nest .EditorContent & {
+    @media (--breakpoint-md) {
+      display: none;
+    }
+  }
+
+  & .Widget__title {
+    margin-bottom: var(--space-1);
+    padding: 0;
+
+    font-family: var(--accent-font);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: var(--font-weight-normal);
+
+    background: transparent;
+    color: var(--blue);
+  }
+
+  & .Widget__content {
+    padding: var(--space-2);
+
+    border: 1px solid var(--blue);
+
+    & .Button--outline {
+      border-color: currentColor;
+      color: var(--white);
+
+      &:hover {
+        background-color: var(--white);
+        box-shadow: 0 0 0 2px var(--white);
+        color: var(--gray-dark);
+      }
+    }
+  }
+
+  & .Widget__photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--black);
+
+    & .Widget__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

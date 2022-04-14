@@ -1,0 +1,49 @@
+.Icon {
+  font-family: 'mesohub' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon--linkedin:before { content: "\e906"; }
+.Icon--angle-down:before { content: "\e90e"; }
+.Icon--angle-left:before { content: "\e90f"; }
+.Icon--angle-up:before { content: "\e911"; }
+.Icon--angle-right:before { content: "\e910"; }
+.Icon--check:before { content: "\e900"; }
+.Icon--close:before { content: "\e901"; }
+.Icon--plus:before { content: "\e90a"; }
+.Icon--minus:before { content: "\e909"; }
+.Icon--menu:before { content: "\e908"; }
+.Icon--email:before { content: "\e902"; }
+.Icon--search:before { content: "\e914"; }
+.Icon--info:before { content: "\e912"; }
+.Icon--question:before { content: "\e90b"; }
+.Icon--exclamation:before { content: "\e903"; }
+.Icon--phone:before { content: "\e913"; }
+.Icon--external-link:before { content: "\e904"; }
+.Icon--facebook:before { content: "\e905"; }
+.Icon--twitter:before { content: "\e90d"; }
+
+.Icon__color-1 { fill: var(--blue); }
+.Icon__color-2 { fill: var(--blue-light); }
+
+.Icon__blue-lighter { fill: var(--blue-lighter); }
+.Icon__blue-light { fill: var(--blue-light); }
+.Icon__blue { fill: var(--blue); }
+.Icon__blue-dark { fill: var(--blue-dark); }
+.Icon__blue-darker { fill: var(--blue-darker); }
+
+.Icon__gray-lighter { fill: var(--gray-lighter); }
+.Icon__gray-light { fill: var(--gray-light); }
+.Icon__gray { fill: var(--gray); }
+.Icon__gray-dark { fill: var(--gray-dark); }
+.Icon__gray-darker { fill: var(--gray-darker); }
+
+.Icon__white { fill: var(--white); }
+.Icon__black { fill: var(--black); }

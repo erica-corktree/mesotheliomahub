@@ -1,0 +1,14 @@
+.ShareTools {
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.ShareTools__col { display: block; }
+.ShareTools__share-wrap { position: relative; }
+
+.ShareTools--PageHeader {
+  margin-top: var(--space-2);
+}

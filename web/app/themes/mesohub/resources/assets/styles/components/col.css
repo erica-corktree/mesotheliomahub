@@ -1,0 +1,16 @@
+.col {
+  @apply mb-8 px-4 flex flex-col;
+
+  @screen md {
+    @apply mb-0;
+  }
+
+  &:last-child {
+    @apply mb-0;
+  }
+
+  & > img,
+  & > p > img {
+    @apply w-full h-auto mx-auto;
+  }
+}

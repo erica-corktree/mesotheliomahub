@@ -1,0 +1,23 @@
+.testimonial {
+  @apply relative flex flex-col p-6 text-left bg-white border testimonial;
+}
+
+.testimonial__content {
+  @apply order-last;
+}
+
+.testimonial__caption {
+  @apply mb-4;
+}
+
+.testimonial__caption-inner {
+  @apply flex flex-col;
+}
+
+.testimonial__name {
+  @apply block uppercase text-gray-darker;
+}
+
+.testimonial__title {
+  @apply block mt-2 text-yellow;
+}

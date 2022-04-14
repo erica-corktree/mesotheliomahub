@@ -1,0 +1,103 @@
+.container {
+  @apply w-full ml-auto mr-auto pr-4 pl-4;
+
+  @media (--breakpoint-sm) {
+    max-width: 640px;
+  }
+
+  @media (--breakpoint-md) {
+    max-width: 768px;
+  }
+
+  @media (--breakpoint-lg) {
+    max-width: 1024px;
+  }
+
+  @media (--breakpoint-xl) {
+    max-width: 1280px;
+  }
+}
+
+.container--hero {
+  @apply relative z-30;
+}
+
+.container--w-sm {
+  max-width: 768px;
+
+  @media (--breakpoint-sm) {
+    max-width: 768px;
+  }
+
+  @media (--breakpoint-md) {
+    max-width: 768px;
+  }
+
+  @media (--breakpoint-lg) {
+    max-width: 768px;
+  }
+
+  @media (--breakpoint-xl) {
+    max-width: 768px;
+  }
+}
+
+.container--w-md {
+  max-width: 1024px;
+
+  @media (--breakpoint-sm) {
+    max-width: 1024px;
+  }
+
+  @media (--breakpoint-md) {
+    max-width: 1024px;
+  }
+
+  @media (--breakpoint-lg) {
+    max-width: 1024px;
+  }
+
+  @media (--breakpoint-xl) {
+    max-width: 1024px;
+  }
+}
+
+.container--w-lg {
+  max-width: 1280px;
+
+  @media (--breakpoint-sm) {
+    max-width: 1280px;
+  }
+
+  @media (--breakpoint-md) {
+   max-width: 1280px;
+  }
+
+  @media (--breakpoint-lg) {
+    max-width: 1280px;
+  }
+
+  @media (--breakpoint-xl) {
+    max-width: 1280px;
+  }
+}
+
+.container--w-full {
+  max-width: 1280px;
+
+  @media (--breakpoint-sm) {
+    max-width: 1280px;
+  }
+
+  @media (--breakpoint-md) {
+    max-width: 1280px;
+  }
+
+  @media (--breakpoint-lg) {
+    max-width: 1280px;
+  }
+
+  @media (--breakpoint-xl) {
+    max-width: 1280px;
+  }
+}

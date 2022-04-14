@@ -1,0 +1,86 @@
+.GuideButton {
+  display: flex;
+  max-width: 175px;
+  width: 100vh;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.GuideButton__inner {
+  position: relative;
+  display: flex;
+  width: 175px;
+  height: 72px;
+  align-items: flex-end;
+  text-decoration: none;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.GuideButton__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  height: 72px;
+  width: 176px;
+  background-color: var(--black);
+}
+
+.GuideButton__img {
+  display: block;
+  height: 72px;
+  width: 175px;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+
+  @nest .Masthead__cta:hover .GuideButton & {
+    opacity: 0.75;
+  }
+}
+
+.GuideButton__text {
+  position: relative;
+  z-index: var(--z1);
+  margin-left: 10%;
+  padding: var(--space-05) var(--space-05) 0 var(--space-05);
+  text-decoration: none;
+  transform: rotate(-15deg);
+}
+
+.GuideButton__heading {
+  display: block;
+  color: var(--white);
+  font-family: var(--heading-font);
+  font-size: var(--body-smaller);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.GuideButton__heading-top {
+  display: block;
+  text-decoration: none;
+}
+
+.GuideButton__heading-bottom {
+  display: block;
+  margin-top: -2px;
+  text-decoration: none;
+}
+
+.GuideButton__subheading {
+  display: block;
+  color: var(--blue-light);
+  font-family: var(--body-font);
+  font-size: var(--body-micro);
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+}
+
+.GuideButton--bottomcta {
+  display: flex;
+}

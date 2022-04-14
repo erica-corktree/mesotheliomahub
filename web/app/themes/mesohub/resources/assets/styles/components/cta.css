@@ -1,0 +1,28 @@
+.cta {
+  @apply relative;
+}
+
+.cta__wave {
+  @apply absolute;
+  top: 0;
+  right: calc(50% - 1px);
+  height: 100%;
+}
+
+.cta--in-content {
+  @apply relative my-12 bg-yellow-dark text-white;
+
+  &::after {
+    @apply absolute top-0 left-0 block h-full w-screen bg-yellow-dark;
+    content: '';
+    transform: translateX(-4rem);
+  }
+
+  &:last-child {
+    @apply mb-0;
+  }
+
+  & .button {
+    white-space: nowrap;
+  }
+}

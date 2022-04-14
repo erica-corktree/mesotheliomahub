@@ -1,0 +1,92 @@
+.FooterCTA {
+  position: relative;
+
+  padding: var(--space-3) 0;
+
+  background: linear-gradient(150deg, var(--blue-dark) 0%, var(--blue-dark) 50%, var(--blue-dark) 50%, var(--blue-dark) 100%);
+  color: var(--white);
+
+  & > .Container {
+    display: flex;
+
+    flex-direction: column;
+
+    @media (--breakpoint-md) {
+      flex-direction: row;
+    }
+  }
+
+  & .FooterCTA__col {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    &.FooterCTA__col--left {
+      padding-bottom: var(--space-2);
+
+      @media (--breakpoint-md) {
+        padding-right: var(--space-2);
+        padding-bottom: 0;
+        width: 65%;
+      }
+
+      @media (--breakpoint-lg) {
+        width: 70%;
+      }
+    }
+
+    &.FooterCTA__col--right {
+      @media (--breakpoint-md) {
+        width: 35%;
+      }
+
+      @media (--breakpoint-lg) {
+        width: 30%;
+      }
+
+      & > .Icon {
+        margin: 0 auto var(--space-05);
+        max-width: 125px;
+
+        & .Icon__color-1 { fill: var(--blue-light); }
+        & .Icon__color-2 { fill: rgba(0,0,0,0); }
+      }
+    }
+  }
+
+  & .FooterCTA__heading {
+    margin-bottom: var(--space-1);
+
+    font-size: var(--h2);
+    line-height: 1.1;
+  }
+
+  & .FooterCTA__content {
+    margin-bottom: 0;
+  }
+
+  & .FooterCTA__phone-number {
+    display: block;
+
+    font-size: var(--h2);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--white);
+
+    & .Icon {
+      display: inline-block;
+
+      color: var(--blue-light);
+      transform: translateY(3px)
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.is-visible { display: block !important; }
+.is-hidden { display: none !important; }
+
+body.is-reveal-open { overflow: hidden; }
+
+html.is-reveal-open,
+html.is-reveal-open body {
+  min-height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.reveal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1005;
+  display: none;
+  padding: 0 var(--space-1);
+  background-color: var(--darken-3);
+  overflow-y: scroll;
+
+  @media (--breakpoint-md) {
+    padding: 0;
+  }
+}
+
+.Modal {
+  z-index: 1006;
+  backface-visibility: hidden;
+  display: none;
+  background-color: var(--white);
+  box-shadow: var(--shadow-1);
+  position: relative;
+  top: 50px !important;
+  margin-right: auto;
+  margin-left: auto;
+  overflow-y: auto;
+
+  @media (--breakpoint-md) {
+    top: 100px !important;
+  }
+
+  @media (--breakpoint-xs-sm) {
+    min-height: 0;
+  }
+
+  @media (--breakpoint-md) {
+    width: 800px;
+    max-width: 75rem;
+  }
+
+  @media (--breakpoint-md) {
+    &.Modal--tiny {
+      width: 450px;
+      max-width: 75rem;
+    }
+  }
+
+  @media (--breakpoint-md) {
+    &.Modal--small {
+      width: 650px;
+      max-width: 75rem;
+    }
+  }
+
+  @media (--breakpoint-md) {
+    &.Modal--large {
+      width: 90%;
+      max-width: 75rem;
+    }
+  }
+
+  @nest [data-whatinput='mouse'] & { outline: 0; }
+
+  &.Modal--full {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin-left: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  &.without-overlay { position: fixed; }
+  &.collapse { padding: 0; }
+}
+
+.Modal__heading {
+  margin-bottom: calc(var(--space-1) * 1.25);
+  font-size: var(--h3-mobile);
+  font-weight: var(--font-weight-5);
+  line-height: 1.2;
+
+  @media (--breakpoint-md) {
+    font-size: var(--h3);
+  }
+}
+
+.Modal__content {
+  padding: var(--space-1);
+  font-size: var(--body-large);
+
+  @media (--breakpoint-md) {
+    padding: var(--space-2);
+  }
+
+  & :last-child { margin-bottom: 0; }
+}
+
+.Modal__close-button {
+  position: absolute;
+  right: var(--space-075);
+  top: var(--space-075);
+  padding: 0;
+  font-size: var(--body-small);
+  line-height: 1;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.Modal--request-form {
+  text-align: center;
+  background-color: var(--gray-lighter);
+}

@@ -1,0 +1,13 @@
+.Illustration {
+  height: auto;
+  width: 100%;
+
+  & .Illustration__blue { fill: var(--blue); }
+  & .Illustration__blue-light { fill: var(--blue-light); }
+  & .Illustration__white { fill: var(--white); }
+  & .Illustration__black { fill: var(--black); }
+  & .Illustration__gray { fill: var(--gray); }
+  & .Illustration__gray-lighter { fill: var(--gray-lighter); }
+}
+
+.Illustration.Illustration--hope { max-width: 240px; }

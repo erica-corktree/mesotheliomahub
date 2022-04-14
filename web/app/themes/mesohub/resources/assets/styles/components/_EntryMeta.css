@@ -1,0 +1,22 @@
+.EntryMeta {
+  margin: var(--space-075) 0 var(--space-025);
+
+  font-family: var(--heading-font);
+  font-size: .875rem;
+  line-height: 1;
+
+  color: inherit;
+
+  a { color: inherit; }
+}
+
+.EntryMeta__authorTime { margin-bottom: 0; }
+.EntryMeta__categories { margin-top: var(--space-1); }
+
+.EntryMeta--small {
+  margin-top: var(--space-05);
+
+  font-size: var(--body-small);
+}
+
+.EntryMeta--card { margin-top: var(--space-05); }

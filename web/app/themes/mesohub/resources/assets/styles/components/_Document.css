@@ -1,0 +1,22 @@
+.Document {
+  overflow-x: hidden;
+
+  @media (--breakpoint-md) {
+  }
+
+  @nest .SiteBody--announcement-active & {
+    padding-top: 90px;
+
+    @media (--breakpoint-md) {
+      padding-top: 120px;
+    }
+  }
+
+  @nest .GlossaryPage & {
+    overflow-x: initial;
+  }
+
+  @nest .EventsPage & {
+    background-color: var(--gray-lighter);
+  }
+}

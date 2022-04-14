@@ -1,0 +1,117 @@
+.PageNav {
+  margin-bottom: var(--space-2);
+  padding: 0 var(--space-2);
+
+  @nest .Page--parent & {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  & .PageNav__heading {
+    position: relative;
+    margin-bottom: var(--space-1);
+    padding-bottom: var(--space-1);
+    font-family: var(--body-font);
+    font-weight: var(--font-weight-normal);
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--blue-dark);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      height: 2px;
+      width: 25px;
+      background-color: var(--darken-1);
+      border-radius: 4px;
+    }
+
+    & > a {
+      text-decoration: none;
+      color: var(--blue-dark);
+    }
+  }
+
+  & .PageNav__menu-item--active > a {
+    font-weight: var(--font-weight-4);
+    color: var(--black);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(var(--space-075) * -1);
+      display: block;
+      height: 80%;
+      width: 3px;
+      background-color: var(--blue-darker);
+      transform: translateY(-50%);
+    }
+  }
+
+  & .PageNav__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & .PageNav__sub-menu > .PageNav__menu-item,
+    & > .PageNav__menu-item,
+    & > .page_item {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 10px;
+
+      & > .PageNav__link,
+      & > a { flex: 1; }
+    }
+
+    & .PageNav__menu-item > .PageNav__link,
+    & .page_item > a {
+      position: relative;
+      display: block;
+      padding: var(--space-025) 0;
+      text-decoration: none;
+      color: var(--blue-dark);
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--blue);
+      }
+    }
+
+    & .PageNav__expand {
+      padding: 0;
+      width: 30px;
+      font-size: var(--body-small);
+      line-height: 1;
+      appearance: none;
+      background-color: transparent;
+      border: 0;
+      color: var(--blue);
+      cursor: pointer;
+
+      &[aria-expanded="true"] .Icon::before { content: "\e90a"; }
+      
+      &[aria-expanded="false"] .Icon::before { content: "\e909"; }
+    }
+  }
+
+  & .PageNav__sub-menu {
+    padding-top: 0;
+  }
+
+  & .PageNav__sub-menu,
+  & .children {
+    display: none;
+    padding: var(--space-05) 0 var(--space-05) var(--space-1);
+    width: 100%;
+    list-style: none;
+
+    &[aria-hidden="false"] { display: block; }
+  }
+}

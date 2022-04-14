@@ -1,0 +1,23 @@
+.alert,
+.hf-message {
+  @apply block mb-8 p-4 w-full bg-gray-light border-l-4 border-gray text-gray-darker;
+}
+
+.alert--success,
+.hf-message-success {
+  @apply bg-green-lighter border-green text-green-darker;
+}
+
+.alert--warning,
+.hf-message-warning {
+  @apply bg-orange-lighter border-orange text-orange-darker;
+}
+
+.alert--danger,
+.hf-message-danger {
+  @apply bg-red-lighter border-red text-red-darker;
+}
+
+.hf-message {
+  @apply mb-0 mt-8;
+}

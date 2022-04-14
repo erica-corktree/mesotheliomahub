@@ -1,0 +1,7 @@
+.legend {
+  @apply w-full mb-4 text-xl font-heading font-semibold text-yellow uppercase;
+}
+
+.legend--card {
+  @apply float-left mb-2 text-gray-darkest;
+}

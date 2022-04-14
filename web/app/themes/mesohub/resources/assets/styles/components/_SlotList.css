@@ -1,0 +1,25 @@
+.SlotList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & .SlotList__item {
+    position: relative;
+    margin-bottom: var(--space-1);
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  & .SlotList__link {
+    display: flex;
+    padding: var(--space-075) var(--space-1);
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    background-color: var(--blue-darker);
+    border-radius: var(--border-radius);
+    color: var(--white);
+    transition: opacity 0.25s ease;
+
+    &:hover { opacity: 0.85; }
+  }
+}

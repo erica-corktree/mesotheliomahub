@@ -1,0 +1,83 @@
+.alignnone {
+  height: auto;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.aligncenter {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: calc(var(--space-1) / 2) auto;
+}
+
+.alignleft,
+.alignright {
+  height: auto;
+  width: 100%;
+  margin-bottom: var(--space-1);
+}
+
+.alignleft.size-thumbnail {
+  float: left;
+  margin-right: var(--space-1);
+}
+
+.alignright.size-thumbnail {
+  float: right;
+  margin-left: var(--space-1);
+}
+
+.alignleft.size-thumbnail,
+.alignright.size-thumbnail {
+  width: auto;
+}
+
+@media (--breakpoint-sm) {
+  .alignleft {
+    float: left;
+    margin-right: var(--space-1);
+    width: auto;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: var(--space-1);
+    width: auto;
+  }
+}
+
+.wp-caption {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: var(--space-1);
+  line-height: 1;
+}
+
+.wp-caption-text {
+  color: var(--lighten-3);
+  font-size: 90%;
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 1rem;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}

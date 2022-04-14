@@ -1,0 +1,40 @@
+.LandingPageForm {
+  position: relative;
+  padding: var(--space-1);
+  width: 100%;
+  text-align: left;
+  background-color: var(--gray-lighter);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-1);
+  color: var(--black);
+
+  @media (--breakpoint-md) {
+    padding: var(--space-2);
+    width: 50%;
+  }
+
+  &.js-submit-success .Form__fieldset,
+  &.js-submit-success .Button {
+    pointer-events: none;
+    opacity: 0.35;
+  }
+
+  & .Alert { margin-bottom: 0; }
+
+  & .Alert--success {
+    position: absolute;
+    bottom: var(--space-2);
+    left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+  }
+
+  & .Alert--error { margin-top: var(--space-1); }
+
+  & .LandingPageForm__disclaimer {
+    margin-top: var(--space-1);
+    margin-bottom: 0;
+    font-size: var(--body-small);
+    font-style: italic;
+  }
+}

@@ -1,0 +1,236 @@
+.Card {
+  display: flex;
+  padding: var(--space-2);
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--white);
+  border: 1px solid var(--darken-1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-1);
+
+  &:hover {
+    text-decoration: none;
+
+    @media (--breakpoint-md) {
+      
+
+      & .Card__footer { background-color: var(--yellow-darker); }
+    }
+  }
+
+  & .Card__icon {
+    margin: 0 auto calc(var(--space-1) * 1.5);
+  }
+
+  & .Card__heading {
+    margin-bottom: var(--space-025);
+    font-family: var(--accent-font);
+    font-weight: var(--font-weight-3);
+    line-height: 1.2;
+    color: var(--blue);
+  }
+
+  & .Card__content {
+    flex: 1 1 auto;
+    color: var(--black);
+  }
+
+  & .Card__footer {
+    margin: var(--space-2) 0 0;
+    padding: var(--space-075) var(--space-1);
+  }
+}
+
+.Card.Card--non-link {
+  padding: var(--space-1) var(--space-2);
+
+  @nest .template-legal-page & {
+    background-color: var(--gray-lighter);
+  }
+}
+
+.Card.Card--blog-post {
+  padding: var(--space-1);
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+  background-color: var(--white);
+
+  &:hover { transform: none; }
+
+  @media (--breakpoint-md) {
+    flex-wrap: initial;
+  }
+
+  & .Card__col--left {
+    padding-right: var(--space-1);
+    flex: 1;
+  }
+
+  & .Card__col--right {
+    margin: var(--space-05) auto 0;
+    width: 100%;
+    text-align: center;
+
+    @media (--breakpoint-md) {
+      margin-top: 0;
+      width: 130px;
+    }
+  }
+
+  & .Card__header {
+    margin-bottom: var(--space-1);
+
+    & .Card__heading {
+      font-size: var(--h4);
+
+      & > a { text-decoration: none; }
+    }
+  }
+
+  & .Card__cat-list {
+    margin: 0 0 var(--space-025);
+    padding: 0;
+    font-size: var(--body-small);
+    list-style-type: none;
+
+    & > li {
+      display: inline-block;
+      margin-right: var(--space-05);
+
+      & > a {
+        text-decoration: underline;
+        color: var(--teal);
+      }
+    }
+  }
+
+  & .Card__content > p { margin-bottom: 0; }
+
+  & .Card__img-link {
+    display: block;
+    height: 100px;
+    margin-bottom: var(--space-05);
+    width: 100%;
+
+    & .Card__img {
+      height: 100%;
+      width: 100%;
+      border: 1px solid var(--darken-1);
+      border-radius: var(--border-radius);
+      object-fit: cover;
+    }
+  }
+}
+
+.Card.Card--event {
+  display: flex;
+  margin-bottom: var(--space-1);
+  padding: var(--space-1);
+  flex-direction: row;
+  text-align: left;
+
+  @media (--breakpoint-md) {
+    margin-bottom: var(--space-2);
+  }
+
+  &:hover { transform: none; }
+
+  & .Card__event-icon {
+    position: relative;
+    display: none;
+    width: 100px;
+    height: 112px;
+    color: var(--white);
+
+    @media (--breakpoint-md) {
+      display: block;
+    }
+
+    & .Card__month,
+    & .Card__day { position: absolute; }
+
+    & .Card__month {
+      top: var(--space-025);
+      left: var(--space-075);
+      font-size: var(--body-tiny);
+    }
+
+    & .Card__day {
+      top: 50%;
+      left: 50%;
+      font-size: var(--h1);
+      transform: translate(-50%, -50%);
+    }
+
+    & .Card__event-svg {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  & .Card__heading {
+    font-size: var(--h3);
+    line-height: 1.2;
+  }
+
+  & .Card__event-content {
+    flex: 1;
+
+    @media (--breakpoint-md) {
+      padding-left: var(--space-1);
+    }
+  }
+}
+
+.CardStack .CardStack__heading {
+  margin-bottom: var(--space-1);
+  font-size: var(--h4);
+  color: var(--blue);
+}
+
+.CardStack .Card,
+.CardGrid .Card {
+  margin-bottom: var(--space-1);
+  padding: 0;
+  text-align: left;
+  background-color: var(--gray-lighter);
+
+  &:hover { transform: none; }
+  &:last-child { margin-bottom: 0; }
+
+  & .Card__heading {
+    padding: var(--space-075) var(--space-1);
+    font-weight: var(--font-weight-bold);
+    border-bottom: 1px solid var(--darken-1);
+  }
+
+  & .Card__content {
+    margin-bottom: 0;
+    padding: var(--space-1);
+  }
+}
+
+.CardGrid {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--breakpoint-md) {
+    margin: 0 calc(var(--space-1) * -1);
+  }
+
+  & .CardGrid__col {
+    margin-bottom: var(--space-2);
+    width: 100%;
+
+    &:last-child { margin-bottom: 0; }
+
+    @media (--breakpoint-md) {
+      margin-bottom: 0;
+      padding: var(--space-1);
+      width: 50%;
+    }
+  }
+}
